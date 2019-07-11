@@ -2,7 +2,7 @@
 
 A XBOX 360 tool built in JavaScript.
 
-# What this uses
+# What this tool uses
 * [NodeJS](https://nodejs.org)
 * [Electron](https://electronjs.org)
 * [XBDM.js](https://npmjs.org/package/xbdm.js)
