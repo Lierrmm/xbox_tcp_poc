@@ -1,6 +1,6 @@
 # Devinuim
 
-A XBOX 360 tool built in JavaScript.
+This is a PoC on communication between a computer and a modified XBOX 360 over a TCP Socket.
 
 # What this tool uses
 * [NodeJS](https://nodejs.org)
@@ -10,3 +10,4 @@ A XBOX 360 tool built in JavaScript.
 ## License
 
 [CC0 1.0 (Public Domain)](LICENSE.md)
+

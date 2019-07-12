@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Devinium</title>
-  </head>
-  <body>
-    <h1>Hello from Devinium!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-    <script src="./renderer.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Devinium</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <input id="connect_value" type="text" placeholder="192.168.0.4" value="192.168.1.7" />
+  <a class="button button_primary inline-block" id="connect">Connect</a>
+  <a class="button button_primary inline-block" id="disconnect">Disconnect</a>
+  <div id="temp_gauge_wrapper">
+    <h2>Temperature</h2>
+    <div id="temp_gauge">
+      <div id="cpu_temp" class="col-lg-3 col-sm-4 col-6 pb-4">
+        <div class="progress-circle">
+          <div class="progress-circle-text">0</div>
+        </div>
+      </div>
+      <div id="gpu_temp" class="col-lg-3 col-sm-4 col-6 pb-4">
+        <div class="progress-circle">
+          <div class="progress-circle-text">0</div>
+        </div>
+      </div>
+      <div id="edram_temp" class="col-lg-3 col-sm-4 col-6 pb-4">
+        <div class="progress-circle">
+          <div class="progress-circle-text">0</div>
+        </div>
+      </div>
+      <div id="mb_temp" class="col-lg-3 col-sm-4 col-6 pb-4">
+        <div class="progress-circle">
+          <div class="progress-circle-text">0</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="send_memory">
+    <h2>Set Memory</h2>
+    <label for="setmem_address">Address:</label>
+    <input id="setmem_address" type="text" placeholder="0x80000000" maxlength="10" />
+    <label for="setmem_address_value">Value:</label>
+    <input id="setmem_address_value" type="text" placeholder="60000000" maxlength="200" />
+    <a id="sendMem" class="button button_primary">Set Memory</a>
+  </div>
+  <div id="get_memory">
+    <h2>Get Memory</h2>
+    <label for="getmem_address">Address:</label>
+    <input id="getmem_address" type="text" placeholder="0x80000000" maxlength="10" />
+    <input id="getmem_address_length" type="number" placeholder="10" max="999" min="4" />
+    <a id="getMem" class="button button_primary">Get Memory</a>
+    <label for="getmem_address_value">Value:</label>
+    <input id="getmem_address_value" type="text" placeholder="60000000" maxlength="200" readonly />
+  </div>
+  <div id="convert_value">
+      <h2>Convert HEX</h2>
+      <label for="convert_address">Hex:</label>
+      <input id="convert_address" type="text" placeholder="6D756C7469706C61796572" />
+      <a id="convert2Int" class="button button_primary">Convert to Decimal</a>
+      <a id="convert2Str" class="button button_primary">Convert to String</a>
+      <label for="convert_address_value">Value:</label>
+      <input id="convert_address_value" type="text" placeholder="60000000" maxlength="200" readonly />
+  </div>
+  <script src="./renderer.js"></script>
+</body>
+
 </html>
