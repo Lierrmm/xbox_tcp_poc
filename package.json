@@ -17,7 +17,7 @@
   "author": "Liam",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^13.6.6"
+    "electron": "^15.5.5"
   },
   "dependencies": {
     "xbdm.js": "^1.1.5"
